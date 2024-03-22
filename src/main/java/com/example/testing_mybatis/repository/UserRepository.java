@@ -6,6 +6,8 @@ import com.example.testing_mybatis.provider.UserProvider;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 @Mapper
 public interface UserRepository {
@@ -20,5 +22,7 @@ public interface UserRepository {
             @Result(property = "password", column = "password")
     })
     int insetNewUser(@Param("user_db")User user);
+    @Select("SELECT * FROM user_db")
+    List<User>findAllUses();
 
 }

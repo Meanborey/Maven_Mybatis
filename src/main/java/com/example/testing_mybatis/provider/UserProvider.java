@@ -15,5 +15,10 @@ public class UserProvider {
             VALUES("password","#{user_db.password}");
         }}.toString();
     }
+//    public String buildGetAllSql(){
+//        return new SQL(){{
+//
+//        }}.toString();
+//    }
 
 }
